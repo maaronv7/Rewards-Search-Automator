@@ -37,9 +37,9 @@ let config = {
     },
 
     searches: {
-        millisecondsMin: 8000,
-        millisecondsMax: 10000,
-        desktop: 3,
+        millisecondsMin: 360000,
+        millisecondsMax: 420000,
+        desktop: 20,
         mobile: 3
     },
 
