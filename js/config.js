@@ -1,3 +1,6 @@
+const response = await fetch(chrome.runtime.getURL('js/config.json'));
+const externalConfig = await response.json();
+
 let config = {
     general: {
         appVersion: "v2.1.0",
@@ -14,7 +17,6 @@ let config = {
         url: "https://bing.com/search?q={q}&form={form}&cvid={cvid}",
         form: "QBRE"
     },
-
     devices: {
         phone: {
             title: "Samsung Galaxy S21",
@@ -35,15 +37,7 @@ let config = {
             mobile: false
         }
     },
-
-    searches: {
-        millisecondsMin: 240000,
-        millisecondsMax: 300000,
-        desktop: 20,
-        mobile: 3
-    },
-
-
+    searches: externalConfig.searches,
     domElements: {
         desktopButton: '#desktopButton',
         mobileButton: '#mobileButton',
@@ -59,7 +53,6 @@ let config = {
         rewardsLink: "#rewardsLink",
         f1PromoLink: "#btn-f1-promo",
         progressBar: ".progress-bar"
-
     }
 }
 

@@ -1,0 +1,8 @@
+{
+    "searches": {
+        "millisecondsMin": 240000,
+        "millisecondsMax": 270000,
+        "desktop": 5,
+        "mobile": 3
+    }
+}
